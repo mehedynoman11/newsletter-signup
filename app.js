@@ -5,6 +5,9 @@ const session = require('express-session');
 const app = express();
 const port = process.env.PORT || 1111;
 const mongoose = require("mongoose");
+const path = require('path'); 
+
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(
     session({
